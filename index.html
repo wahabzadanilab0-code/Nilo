@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NILOO | Modern Fashion Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <a class="logo" href="#home">NILOO<span>.</span></a>
+    <nav id="nav">
+      <a href="#home">Home</a>
+      <a href="#collections">Collections</a>
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button id="searchOpen" class="icon-button" aria-label="Search">⌕</button>
+      <button id="wishlistOpen" class="icon-button" aria-label="Wishlist">♡</button>
+      <button id="cartOpen" class="cart-button">Cart <span id="cartCount">0</span></button>
+      <button id="menuOpen" class="menu-button">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SLIDER -->
+    <section class="hero" id="home">
+      <div class="hero-bg" id="heroBackground"></div>
+      <div class="hero-content">
+        <span class="eyebrow" id="heroEyebrow">NEW COLLECTION 2026</span>
+        <h1 id="heroTitle">Fresh style,<br>made for you</h1>
+        <p id="heroDescription">Everyday essentials and standout pieces, curated for your style.</p>
+        <a href="#shop" class="button button-orange">Explore the collection</a>
+      </div>
+
+      <div class="hero-gallery" id="heroGallery">
+        <button class="hero-thumb active" data-slide="0" aria-label="Collection one"></button>
+        <button class="hero-thumb" data-slide="1" aria-label="Collection two"></button>
+        <button class="hero-thumb" data-slide="2" aria-label="Collection three"></button>
+      </div>
+
+      <div class="hero-arrows">
+        <button id="heroPrev" aria-label="Previous">‹</button>
+        <button id="heroNext" aria-label="Next">›</button>
+      </div>
+      <div class="hero-counter"><span id="slideNumber">01</span> / 03</div>
+    </section>
+
+    <!-- COLLECTION CATEGORIES -->
+    <section class="collections section" id="collections">
+      <div class="section-heading">
+        <div><span class="eyebrow">CATEGORIES</span><h2>Find your style</h2></div>
+        <p>Choose a category to explore matching pieces.</p>
+      </div>
+      <div class="collection-buttons">
+        <button class="collection-card active" data-category="All">
+          <span class="collection-icon">✦</span><strong>All products</strong><small>View all</small>
+        </button>
+        <button class="collection-card" data-category="Clothing">
+          <span class="collection-icon">♧</span><strong>Clothing</strong><small>Everyday style</small>
+        </button>
+        <button class="collection-card" data-category="Bags">
+          <span class="collection-icon">▱</span><strong>Bags</strong><small>Statement pieces</small>
+        </button>
+        <button class="collection-card" data-category="Shoes">
+          <span class="collection-icon">⌁</span><strong>Shoes</strong><small>Comfort meets style</small>
+        </button>
+        <button class="collection-card" data-category="Accessories">
+          <span class="collection-icon">◇</span><strong>Accessories</strong><small>The finishing touch</small>
+        </button>
+      </div>
+    </section>
+
+    <!-- SHOP -->
+    <section class="shop section" id="shop">
+      <div class="section-heading">
+        <div><span class="eyebrow">THE COLLECTION</span><h2>Featured products</h2></div>
+        <div class="shop-tools">
+          <input id="searchInput" type="search" placeholder="Search products...">
+          <select id="sortSelect">
+            <option value="default">Sort by</option>
+            <option value="low">Price: low to high</option>
+            <option value="high">Price: high to low</option>
+            <option value="name">Name</option>
+          </select>
+        </div>
+      </div>
+      <div class="active-filter">
+        <span id="filterLabel">All products</span>
+        <button id="clearFilter">Clear filter ×</button>
+      </div>
+      <div class="products-grid" id="productsGrid"></div>
+      <p class="empty-message" id="emptyMessage">No products found.</p>
+    </section>
+
+    <section class="wide-banner">
+      <div><span class="eyebrow">JUST FOR YOU</span><h2>Beauty is in the details.</h2><p>Discover pieces you love and make every look your own.</p><a href="#shop" class="button button-light">Start shopping</a></div>
+      <div class="banner-word">NILOO<br><span>STYLE</span></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about section" id="about">
+      <div class="about-photo"></div>
+      <div class="about-text">
+        <span class="eyebrow">OUR STORY</span>
+        <h2>About NILOO</h2>
+        <p>We believe everyone has a style that is uniquely their own. At NILOO, we curate beautiful clothing and accessories that bring confidence, comfort, and effortless style to everyday life.</p>
+        <a href="#contact" class="under-link">Get in touch →</a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact section" id="contact">
+      <div><span class="eyebrow">GET IN TOUCH</span><h2>We would love to hear from you</h2><p>Have a question about an item? Send us a message.</p></div>
+      <form id="contactForm">
+        <input id="contactName" type="text" placeholder="Your name" required>
+        <input id="contactEmail" type="email" placeholder="Your email" required>
+        <textarea id="contactMessage" placeholder="Your message..." rows="4" required></textarea>
+        <button class="button button-orange" type="submit">Send message</button>
+        <small id="contactResult"></small>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div><a class="logo footer-logo" href="#home">NILOO<span>.</span></a><p>Your style. Your choice.</p></div>
+    <div><h4>Quick links</h4><a href="#home">Home</a><a href="#shop">Shop</a><a href="#about">About</a></div>
+    <div><h4>Customer care</h4><a href="#contact">Contact</a><a href="#shop">Products</a><a href="#collections">CATEGORIES</a></div>
+    <div><h4>Follow us</h4><p class="socials">◎　f　◉</p></div>
+    <p class="copyright">© 2026 NILOO. All rights reserved.</p>
+  </footer>
+
+  <!-- SEARCH PANEL -->
+  <div class="search-panel" id="searchPanel">
+    <button class="close-button" id="searchClose">×</button>
+    <h3>Search Products</h3>
+    <input id="bigSearchInput" type="search" placeholder="Enter a product name...">
+    <button class="button button-orange" id="searchSubmit">Search</button>
+  </div>
+
+  <!-- CART DRAWER -->
+  <div class="screen-cover" id="screenCover"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="drawer-heading"><h3>Your Cart</h3><button id="cartClose">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="drawer-footer">
+      <div class="total-line"><span>Items</span><strong id="cartQuantity">0</strong></div>
+      <div class="total-line"><span>Subtotal</span><strong id="cartTotal">0 AFN</strong></div>
+      <button id="checkoutButton" class="button button-orange full-button">Checkout</button>
+    </div>
+  </aside>
+
+  <!-- PRODUCT DETAILS: Select a thumbnail to change the main image. -->
+  <div class="jadelyl" id="productNILOOl">
+    <div class="jadelyl-box">
+      <button class="close-button jadelyl-close" id="jadelylClose">×</button>
+      <div class="jadelyl-gallery">
+        <div class="main-product-image" id="mainProductImage"></div>
+        <div class="mini-images" id="miniImages"></div>
+      </div>
+      <div class="jadelyl-details">
+        <span class="eyebrow">PRODUCT DETAILS</span>
+        <h2 id="detailName"></h2>
+        <p id="detailDescription"></p>
+        <strong id="detailPrice" class="detail-price"></strong>
+        <label>Choose a color</label>
+        <div class="color-options" id="colorOptions">
+          <button class="color-dot selected" data-color="Black" style="background:#222"></button>
+          <button class="color-dot" data-color="Cream" style="background:#d9c4a6"></button>
+          <button class="color-dot" data-color="Blue" style="background:#7895b2"></button>
+        </div>
+        <label for="detailSize">Select size</label>
+        <select id="detailSize"><option>Small</option><option>Medium</option><option>Large</option></select>
+        <button id="detailAddButton" class="button button-orange full-button">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- WISHLIST PANEL -->
+  <aside class="wishlist-panel" id="wishlistPanel">
+    <div class="drawer-heading"><h3>Wishlist</h3><button id="wishlistClose">×</button></div>
+    <div id="wishlistItems"></div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
